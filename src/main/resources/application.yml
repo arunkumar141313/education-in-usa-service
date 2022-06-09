@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: educationinusa-service
+  config:
+    import: configserver:https://api-prod.educationinusa.org/config
+    name: {spring.application.name}
