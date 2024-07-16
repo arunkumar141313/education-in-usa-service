@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: educationinusa-service
+  datasource:
+    url: jdbc:mysql://eduusa.cpskwy0kut3k.us-east-2.rds.amazonaws.com/PROD_EDUCATION_IN_USA?useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: eduusa
+    password: Edu#usa123456
+  hibernate:
+    dialect: org.hibernate.dialect.MySQL8Dialect

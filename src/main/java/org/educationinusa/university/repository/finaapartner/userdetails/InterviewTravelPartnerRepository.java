@@ -21,8 +21,8 @@ public interface InterviewTravelPartnerRepository extends
 
 
     @Query(value = """
-            SELECT ITP.* FROM DEV_University.InterviewTravelPartner ITP
-            INNER JOIN DEV_University.InterviewDetails ID ON ID.ID = ITP.InterviewDetailsID
+            SELECT ITP.* FROM University.InterviewTravelPartner ITP
+            INNER JOIN University.InterviewDetails ID ON ID.ID = ITP.InterviewDetailsID
             WHERE ITP.TravelPartnerRequired = 1 AND ITP.GenderPreferenceID IN (?1)
             AND ITP.RowStatus = 1 AND ID.RowStatus = 1 AND ID.InterviewStatusID IN(18, 20) AND ITP.UserID NOT IN (?2) AND ITP.TravelFromStateID = ?3
             AND DATE(convert_tz(ID.InterviewDate,'+05:30','+00:00')) = DATE(convert_tz(?4,'+05:30','+00:00'))""", nativeQuery = true)

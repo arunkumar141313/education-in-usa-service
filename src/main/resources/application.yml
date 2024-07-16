@@ -1,6 +1,17 @@
 spring:
   application:
     name: educationinusa-service
-  config:
-    import: configserver:https://api-prod.educationinusa.org/config
-    name: {spring.application.name}
+
+  jpa:
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+server:
+  port: 8083
+
+#JWT security
+educationinusa:
+  app:
+    jwtSecret: EducationInUSA@2098
+    jwtExpirationMs: 86400000

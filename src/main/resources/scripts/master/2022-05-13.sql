@@ -7,7 +7,7 @@
 
 -- Row Status table
 
-USE DEV_EducationInUSA;
+USE DEV_EDUCATION_IN_USA;
 
 CREATE TABLE IF NOT EXISTS `RowStatus` (
   `ID` INT NOT NULL AUTO_INCREMENT,
